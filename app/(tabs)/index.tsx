@@ -1,3 +1,4 @@
+import Button from "@/components/Button";
 import SwipableRow from "@/components/SwipableRow";
 import React, { useState } from "react";
 import { View } from "react-native";
@@ -18,6 +19,7 @@ const HomeScreen = () => {
       {items.map((item) => (
         <SwipableRow key={item.id} id={item.id} onDelete={removeItem} />
       ))}
+      <Button />
     </View>
   );
 };
