@@ -1,25 +1,11 @@
-import Button from "@/components/Button";
-import SwipableRow from "@/components/SwipableRow";
-import React, { useState } from "react";
+import BottomSheet from "@/components/BottomSheet";
+import React from "react";
 import { View } from "react-native";
 
 const HomeScreen = () => {
-  const [items, setItems] = useState([
-    { id: 1, title: "Item1" },
-    { id: 2, title: "Item2" },
-  ]);
-
-  const removeItem = (id: number) => {
-    setItems((prev) => {
-      return prev.filter((item) => item.id !== id);
-    });
-  };
   return (
-    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-      {items.map((item) => (
-        <SwipableRow key={item.id} id={item.id} onDelete={removeItem} />
-      ))}
-      <Button />
+    <View style={{ flex: 1 }}>
+      <BottomSheet />
     </View>
   );
 };
